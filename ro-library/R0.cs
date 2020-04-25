@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Copyright 2020 CloseAssociate, all rights reserved
+ * www.closeassociate.com
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 

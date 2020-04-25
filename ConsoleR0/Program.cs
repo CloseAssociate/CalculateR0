@@ -1,4 +1,8 @@
-﻿using CloseAssociate.R0_library;
+﻿/*
+ * Copyright 2020 CloseAssociate, all rights reserved
+ * www.closeassociate.com
+ */
+using CloseAssociate.R0_library;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,17 +34,14 @@ namespace CloseAssociate.consoleR0
              // 26 Feb 2020 is the first date of a recorded infection in New Zealand time series
             var startDate = new DateTime(2020, 2, 26);
             
-            // Now display the results and Copyright notice
+            // Now display the results
             Enumerable.Range(0, Reff.Count)
                 .ToList()
                 .ForEach(x =>
                 {
-                    Console.WriteLine($"day({x})\t {startDate.AddDays(x).ToShortDateString()} \tReff(t) = {Reff[x].ToString("0.0")}" );
+                    Console.WriteLine($"day({x})\t {startDate.AddDays(x).ToString("dd MMM yyy")} \tReff(t) = {Reff[x].ToString("0.0")}" );
                 });
 
-            Console.WriteLine("===================================================");
-            Console.WriteLine("Copyright 2020 CloseAssociate, all rights reserved.");
-            Console.WriteLine("===================================================");
             Console.Read();
         }
     }
